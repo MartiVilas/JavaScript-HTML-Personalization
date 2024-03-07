@@ -22,6 +22,8 @@
     "editor.guides.highlightActiveIndentation": true,
 }
 ```
+ ![image](https://github.com/MartiVilas/JavaScript-Personalization/assets/150129703/722a628e-62fb-46f3-92fb-395c77d151b0)
+
 ---
 
 ## Current Snippets 
@@ -60,3 +62,5 @@
 	}
 
 ```
+
+![image](https://github.com/MartiVilas/JavaScript-Personalization/assets/150129703/ba0a077c-b331-4a40-9914-d211ea9189ef)
