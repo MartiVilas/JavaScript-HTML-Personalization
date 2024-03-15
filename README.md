@@ -1,4 +1,4 @@
-# 📚 JavaScript Personalization
+# 📚 VSCode Personalization
 
 ## Current bracket guide {}
 
@@ -64,3 +64,45 @@
 ```
 
 ![image](https://github.com/MartiVilas/JavaScript-Personalization/assets/150129703/ba0a077c-b331-4a40-9914-d211ea9189ef)
+
+
+
+### 📚 HTML Snippets
+
+```
+	"HTML": {
+		"prefix": "base",
+		"body": [
+		  "<!DOCTYPE html>",
+		  "<html lang=\"es\">",
+		  "<head>",
+		  "    <meta charset=\"UTF-8\">",
+		  "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+		  "    <link rel=\"stylesheet\" href=\"./style.css\">",
+		  "    <script src=\"./main.js\" defer></script>",
+		  "",
+		  "    <title>Titulo</title>",
+		  "</head>",
+		  "",
+		  "<body>",
+		  "    ",
+		  "    <header>",
+		  "",
+		  "    </header>",
+		  "",
+		  "    <main>",
+		  "",
+		  "",
+		  "    </main>",
+		  "",
+		  "    <footer>",
+		  "        ",
+		  "    </footer>",
+		  "</body>",
+		  "</html>"
+		],
+		"description": ""
+	  }
+```
+![image](https://github.com/MartiVilas/JavaScript-Personalization/assets/150129703/2d0f8345-d140-44ae-9ec9-ce88e72d466b)
+![image](https://github.com/MartiVilas/JavaScript-Personalization/assets/150129703/ce4f8b3c-977a-4ef0-8867-55e905607d4f)
