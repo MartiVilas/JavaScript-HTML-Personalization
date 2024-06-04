@@ -59,7 +59,17 @@
 			"let gadgets = new Set(['añadir contenido set']);",
 		],
 		"description": "Log output to console"
-	}
+	},
+
+	"imprimirObjeto":{
+		"prefix": "SetArray",
+		"body": [
+			"let gadgets = new Set(['añadir contenido set']);",
+		],
+		"description": "Log output to console",
+	},
+
+	
 
 ```
 
