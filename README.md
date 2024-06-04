@@ -64,7 +64,9 @@
 	"imprimirObjeto":{
 		"prefix": "SetArray",
 		"body": [
-			"let gadgets = new Set(['añadir contenido set']);",
+			"for (const atributo in objeto) {",
+				"añadirAlDom(id, `Atributo: ${objeto[atributo]}`);",
+			 "}",
 		],
 		"description": "Log output to console",
 	},
