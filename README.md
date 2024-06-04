@@ -54,7 +54,7 @@
 
 
 	"SetArray":{
-		"prefix": "SetArray",
+		"prefix": "ImprimirObjeto",
 		"body": [
 			"let gadgets = new Set(['añadir contenido set']);",
 		],
