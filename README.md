@@ -29,53 +29,54 @@
 ## Current Snippets 
 
 ```json
-	"DOM": {
-		"prefix": "DOM",
-		"body": [
-			"function añadirAlDom(id,resultado){",
-			"\tconst container = document.getElementById(id)",
-			"\tlet p = docuement.createElement('p');",
-			"\tcontainer.appendChild(p);",
-			"\tp.textContent = resultado;",
-			"\tp.setAttribute('class', 'result');",
-			"}"
-		],
-		"description": "Log output to console"
-	},
+{
 
+    "DOM": {
+        "prefix": "DOM",
+        "body": [
+            "function añadirAlDom(id, resultado) {",
+            "\tconst container = document.getElementById(id);",
+            "\tlet p = document.createElement('p');",
+            "\tcontainer.appendChild(p);",
+            "\tp.textContent = resultado;",
+            "\tp.setAttribute('class', 'result');",
+            "}"
+        ],
+        "description": "Add an element to the DOM"
+    },
 
-	"MapArray":{
-		"prefix": "MapArray",
-		"body": [
-			"array.map(elemento => 'añadir lo que se necesite')",
-		],
-		"description": "Log output to console"
-	},
+    "MapArray": {
+        "prefix": "MapArray",
+        "body": [
+            "array.map(elemento => 'añadir lo que se necesite')"
+        ],
+        "description": "Map over an array"
+    },
 
+    "SetArray": {
+        "prefix": "SetArray",
+        "body": [
+            "let gadgets = new Set(['añadir contenido set']);"
+        ],
+        "description": "Create a new Set"
+    },
 
-	"SetArray":{
-		"prefix": "ImprimirObjeto",
-		"body": [
-			"let gadgets = new Set(['añadir contenido set']);",
-		],
-		"description": "Log output to console"
-	},
-
-	"imprimirObjeto":{
-		"prefix": "SetArray",
-		"body": [
-			"for (const atributo in objeto) {",
-				"añadirAlDom(id, `Atributo: ${objeto[atributo]}`);",
-			 "}",
-		],
-		"description": "Log output to console",
-	},
+    "imprimirObjeto": {
+        "prefix": "imprimirObjeto",
+        "body": [
+            "function imprimirClase(id, objeto) {",
+            "\tfor (const atributo in objeto) {",
+            "\t\tañadirAlDom(id, `atributo: ${atributo}, valor: ${objeto[atributo]}`);",
+            "\t}",
+            "}"
+        ],
+        "description": "Print object attributes"
+    }
+}
 
 	
 
 ```
-
-![image](https://github.com/MartiVilas/JavaScript-Personalization/assets/150129703/ba0a077c-b331-4a40-9914-d211ea9189ef)
 
 
 
