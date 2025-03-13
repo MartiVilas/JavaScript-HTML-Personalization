@@ -74,48 +74,74 @@
     }
 }
 
-	
+  "Generar tabla en el DOM a partir de un objeto": {
+          "prefix": "tablaDom",
+          "body": [
+            "/**",
+            " * Genera una tabla HTML en el DOM a partir de un objeto dado.",
+            " *",
+            " * @param {string} id - ID del contenedor donde se insertará la tabla.",
+            " * @param {Object} objeto - Objeto cuyos atributos y valores se mostrarán en la tabla.",
+            " * @param {Object} [opciones={}] - Opciones de personalización.",
+            " * @param {boolean} [opciones.incluirFunciones=false] - Si es `true`, incluirá métodos del objeto.",
+            " * @param {string} [opciones.claseTabla=\"tabla-estilo\"] - Clase CSS para la tabla.",
+            " */",
+            "function tablaDom(id, objeto, opciones = {}) {",
+            "  const contenedor = document.getElementById(id);",
+            "  if (!contenedor) {",
+            "    console.error(`No se encontró ningún elemento con id \"${id}\"`);",
+            "    return;",
+            "  }",
+            "  const { incluirFunciones = false, claseTabla = \"tabla-estilo\" } = opciones;",
+            "  const tabla = document.createElement(\"table\");",
+            "  tabla.className = claseTabla;",
+            "  tabla.style.borderCollapse = \"collapse\";",
+            "  tabla.style.width = \"100%\";",
+            "  tabla.style.textAlign = \"left\";",
+            "  const filaAtributos = document.createElement(\"tr\");",
+            "  const filaValores = document.createElement(\"tr\");",
+            "  const claves = Object.keys(objeto).filter(clave => incluirFunciones || typeof objeto[clave] !== \"function\");",
+            "  for (const clave of claves) {",
+            "    const th = document.createElement(\"th\");",
+            "    th.textContent = clave;",
+            "    th.style.border = \"1px solid #ccc\";",
+            "    th.style.padding = \"8px\";",
+            "    filaAtributos.appendChild(th);",
+            "    const td = document.createElement(\"td\");",
+            "    td.style.border = \"1px solid #ccc\";",
+            "    td.style.padding = \"8px\";",
+            "    td.appendChild(formatearValor(objeto[clave]));",
+            "    filaValores.appendChild(td);",
+            "  }",
+            "  tabla.appendChild(filaAtributos);",
+            "  tabla.appendChild(filaValores);",
+            "  contenedor.appendChild(tabla);",
+            "}",
+            "",
+            "/**",
+            " * Formatea un valor para ser insertado en la tabla, manejando objetos y arrays.",
+            " *",
+            " * @param {*} valor - Valor a formatear.",
+            " * @returns {HTMLElement} - Elemento HTML con el valor formateado.",
+            " */",
+            "function formatearValor(valor) {",
+            "  if (Array.isArray(valor)) {",
+            "    const ul = document.createElement(\"ul\");",
+            "    valor.forEach(item => {",
+            "      const li = document.createElement(\"li\");",
+            "      li.appendChild(formatearValor(item));",
+            "      ul.appendChild(li);",
+            "    });",
+            "    return ul;",
+            "  } else if (typeof valor === \"object\" && valor !== null) {",
+            "    return document.createTextNode(JSON.stringify(valor, null, 2));",
+            "  } else {",
+            "    return document.createTextNode(valor);",
+            "  }",
+            "}"
+          ],
+          "description": "Genera una tabla HTML en el DOM a partir de un objeto."
+        }
+
 
 ```
-
-
-
-### 📚 HTML Snippets
-
-```
-	"HTML": {
-		"prefix": "base",
-		"body": [
-		  "<!DOCTYPE html>",
-		  "<html lang=\"es\">",
-		  "<head>",
-		  "    <meta charset=\"UTF-8\">",
-		  "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
-		  "    <link rel=\"stylesheet\" href=\"./style.css\">",
-		  "    <script src=\"./main.js\" defer></script>",
-		  "",
-		  "    <title>Titulo</title>",
-		  "</head>",
-		  "",
-		  "<body>",
-		  "    ",
-		  "    <header>",
-		  "",
-		  "    </header>",
-		  "",
-		  "    <main>",
-		  "",
-		  "",
-		  "    </main>",
-		  "",
-		  "    <footer>",
-		  "        ",
-		  "    </footer>",
-		  "</body>",
-		  "</html>"
-		],
-		"description": ""
-	  }
-```
-![image](https://github.com/MartiVilas/JavaScript-Personalization/assets/150129703/2d0f8345-d140-44ae-9ec9-ce88e72d466b)
-![image](https://github.com/MartiVilas/JavaScript-Personalization/assets/150129703/ce4f8b3c-977a-4ef0-8867-55e905607d4f)
